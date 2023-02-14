@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+
+    <!-- Font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind cdn link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        button{
+            padding: 10px !important;
+            border-radius: 5px;
+        }
+        button:hover,
+        button:focus,
+        button:active{
+            background-color: black;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    
+    <header class="flex flex-col items-center p-2 justify-center h-screen gap-5">
+        <h2 class="text-center  text-3xl">Text Editor</h2>
+
+        <div class="row h-96 w-full  lg:w-1/2  p-4 flex flex-col gap-4 bg-gray-600 rounded-xl border">
+            <div class="grid lg:overflow-hidden text-center bg-gray-800 rounded grid-cols-1 lg:grid-cols-3 ">
+                <div class="bg-gray-700 lg:pl-4 justify-center lg:justify-start flex gap-3 col-3">
+                    <button id="bold"><i class="fa-solid fa-bold"></i></button>
+                    <button id="italic"><i class="fa-solid fa-italic"></i></button>
+                    <button id="underline"><i class="fa-solid fa-underline"></i></button>
+                </div>
+                <div class="bg-gray-700 justify-center flex gap-3 col-3">
+                    <button id="align-left"><i class="fa-solid fa-align-left"></i></button>
+                    <button id="align-center"><i class="fa-solid fa-align-center"></i></button>
+                    <button id="align-right"><i class="fa-solid fa-align-right"></i></button>
+                </div>
+                <div class="bg-gray-700 justify-center lg:justify-end items-center lg:pr-4 py-2 lg:py-0 flex gap-1 col-3">
+                    <button id="text-tansform">aA</button>
+                    <input type="number" value="12" class="w-1/6 lg:w-1/4 px-1 rounded bg-black text-white" id="font-size">
+                    <input type="color" class="rounded" value="#f1f1f1" id="color">
+                </div>
+            </div>
+            <textarea id="text-input" placeholder="Type Your Text" class="w-full h-5/6 rounded-xl bg-gray-800 text-gray-300 p-2"></textarea>
+        </div>
+    </header>
+
+    <!-- linked javascript  -->
+    <script src="index.js"></script>
+</body>
+</html>
